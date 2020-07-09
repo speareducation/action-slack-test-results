@@ -17,6 +17,9 @@ inputs:
     description: Boolean for whether to show a success or failure
     required: false
     default: ${{ job.status }}
+  slack_web_hook:
+    description: Slack Web Hook
+    required: true
   project_name:
     description: Project Name
     required: false
