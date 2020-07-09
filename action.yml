@@ -1,0 +1,27 @@
+name: Slack Notification
+description: A GitHub action to send a slack notification
+branding:
+  icon: check-circle
+  color: green
+runs:
+  using: docker
+  image: Dockerfile
+inputs:
+  summary:
+    description: A 1-line summary of the job results
+    required: true
+  coverage:
+    description: Code coverage %
+    required: true
+  status:
+    description: Boolean for whether to show a success or failure
+    required: false
+    default: ${{ job.status }}
+  project_name:
+    description: Project Name
+    required: false
+    default: ${{ github.repository }}
+  repository_link:
+    description: Repo Link
+    required: false
+    default: https://github.com/${{ github.repository }}
