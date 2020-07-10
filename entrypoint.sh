@@ -1,13 +1,12 @@
 #!/usr/bin/env bash
 
 if [ "$INPUT_STATUS" == "true" ]
+then
     AUTHOR_ICON="https://a.slack-edge.com/production-standard-emoji-assets/10.2/apple-large/2705@2x.png"
     COLOR="#7cc142" # green
-then
+else
     AUTHOR_ICON="https://a.slack-edge.com/production-standard-emoji-assets/10.2/apple-large/274c@2x.png"
     COLOR="#cc0000" # red
-else
-
 fi
 
 SLACK_MESSAGE=$(cat << EOF
